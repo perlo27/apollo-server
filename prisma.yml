@@ -1,0 +1,9 @@
+
+datamodel: datamodel.graphql
+secret: moo4ahn3ahb4phein1eingaep
+endpoint: http://localhost:4466
+hooks:
+  post-deploy:
+    - echo "Deployment finished"
+    - graphql get-schema -p prisma
+    - graphql prepare
